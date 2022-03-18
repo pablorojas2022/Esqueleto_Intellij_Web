@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="668d323b06c0fa302a2400785ebec3da7f6445ad75f19e3c785e83cf63d56b43.html">Realizar Acciones Al Momento</a></span>
+                > <span class="truncate-60"><a
+                    href="b72199e799a8739518da3ded8b70e9dbe2215ebbbc9ae2ee0140cc97a12d078a.html">ingresar a Elements a la opcion Web Tables a adicionar y eliminar un usuario por medio de una lista </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-03-2022 10:53</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Acciones Al Momento </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                de ingresar a la pagina demoqa.com<br />
+como son Elements, Widgets y Alerts.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="7dd5bdd232d48380128705e6936f0fc579f5349a75c8ea72a018347870d64887.html">EscenariosDemoQA
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">ingresar a Elements a la opcion Web Tables a adicionar y eliminar un usuario por medio de una lista
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que queremos ingresar a demoqa<br>Cuando vamos a elements a la opcion web table a adicionar y a eliminar un usuario y se escriba los datos por medio de una lista<br><table class='embedded'><tbody><tr><td>&lt;firstName&gt;</td><td>&lt;lastName&gt;</td><td>&lt;email&gt;</td><td>&lt;age&gt;</td><td>&lt;salary&gt;</td><td>&lt;department&gt;</td><td>&lt;eliminado&gt;</td><td>&lt;selectDate&gt;</td><td>&lt;dateAndTime&gt;</td><td>&lt;name&gt;</td></tr></tbody></table><br>Entonces el ve su usuario creado</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No alert present exception: no such alert</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoAlertPresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>task.Home_Alerts.performAs(Home_Alerts.java:39)<br />stepDefinitions.EjemploSemilleroSteps.vamos_a_elements_a_la_opcion_web_table_a_adicionar_y_a_eliminar_un_usuario_y_se_escriba_los_datos_por_medio_de_una_lista(EjemploSemilleroSteps.java:69)<br />✽.vamos a elements a la opcion web table a adicionar y a eliminar un usuario y se escriba los datos por medio de una lista(file:///C:/Users/pablorojas/intellij-workspace/DemoQAIntellij/src/test/resources/features/EjemploSemilleros.feature:16)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="pagesource2596263354745090531.html" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" 1: ingresar a Elements a la opcion Web Tables a adicionar y eliminar un usuario por medio de una lista ({firstName=Pablo, lastName=Rojas, email=pablorojas@cbit-online.com, age=18, salary=1000000, department=Calidad, eliminado=Cierra, selectDate=09/21/2021, dateAndTime=12/24/2021 23:59, name=PabloRojas})" width="1366"/>
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Dado que queremos ingresar a demoqa" width="1366"/>
+                <img src="0506a3a1dbbee2235fe47286b51a09f8232743f85c8d1caad92c55e9d4d990ac.png" title=" Global opens the Home page elements" width="1366"/>
+                <img src="513365f93c113502f3dfa1eb497708f6d2380f8c22160fd97b0d59cf4955868d.png" title=" Global opens the Home page elements (completed)" width="1366"/>
+                <img src="513365f93c113502f3dfa1eb497708f6d2380f8c22160fd97b0d59cf4955868d.png" title=" Dado que queremos ingresar a demoqa (completed)" width="1366"/>
+                <img src="513365f93c113502f3dfa1eb497708f6d2380f8c22160fd97b0d59cf4955868d.png" title=" Cuando vamos a elements a la opcion web table a adicionar y a eliminar un usuario y se escriba los datos por medio de una lista
+| Pablo | Rojas | pablorojas@cbit-online.com | 18 | 1000000 | Calidad | Cierra | 09/21/2021 | 12/24/2021 23:59 | PabloRojas |" width="1366"/>
+                <img src="513365f93c113502f3dfa1eb497708f6d2380f8c22160fd97b0d59cf4955868d.png" title=" Global home elements" width="1366"/>
+                <img src="513365f93c113502f3dfa1eb497708f6d2380f8c22160fd97b0d59cf4955868d.png" title=" Global tiempo espera" width="1366"/>
+                <img src="96ea71f8b6cab84e5cd553ff6fad2d08f81509394c448805dccfbf111991ffb3.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="96ea71f8b6cab84e5cd553ff6fad2d08f81509394c448805dccfbf111991ffb3.png" title=" Global clicks on SELECCIONAR ELEMENTS" width="1366"/>
+                <img src="bf8ff77e79f491a7231ccc645f4570f3da58aa66db9dae56e400e22f122ee3b9.png" title=" Global clicks on SELECCIONAR ELEMENTS (completed)" width="1366"/>
+                <img src="bf8ff77e79f491a7231ccc645f4570f3da58aa66db9dae56e400e22f122ee3b9.png" title=" Global tiempo espera" width="1366"/>
+                <img src="3287fb23e345e894101096261a061487c3f45fa9ba4ae027f6fc95a2b0951106.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="3287fb23e345e894101096261a061487c3f45fa9ba4ae027f6fc95a2b0951106.png" title=" Global clicks on SELECCIONAR WEB TABLES" width="1366"/>
+                <img src="be3a1fce62578aceff93eb0a1e531a849a3815da272b9f04ec034b0e7a4529cf.png" title=" Global clicks on SELECCIONAR WEB TABLES (completed)" width="1366"/>
+                <img src="be3a1fce62578aceff93eb0a1e531a849a3815da272b9f04ec034b0e7a4529cf.png" title=" Global tiempo espera" width="1366"/>
+                <img src="efad884c202e391c3c3051bdaa37324b5cecadefaf00940e20d16b2c67ed5326.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="efad884c202e391c3c3051bdaa37324b5cecadefaf00940e20d16b2c67ed5326.png" title=" Global clicks on DAR CLICK EN EL BOTON AGREGAR" width="1366"/>
+                <img src="948d8800208dafbad5a4d3906154382a103e3a380c869f8cd582225a8cf18e04.png" title=" Global clicks on DAR CLICK EN EL BOTON AGREGAR (completed)" width="1366"/>
+                <img src="948d8800208dafbad5a4d3906154382a103e3a380c869f8cd582225a8cf18e04.png" title=" Global tiempo espera" width="1366"/>
+                <img src="c0b71aca6bca6a87a40ccff9b77102d4dd64203e867e427fc2c0f0b9646d4ca1.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="c0b71aca6bca6a87a40ccff9b77102d4dd64203e867e427fc2c0f0b9646d4ca1.png" title=" Global clicks on SELECCIONAR LA CASILLA DE NOMBRE" width="1366"/>
+                <img src="4e74294d0535a793b0872fdad010dd6152698b2e9cd86e395d33969f7029cd2a.png" title=" Global clicks on SELECCIONAR LA CASILLA DE NOMBRE (completed)" width="1366"/>
+                <img src="4e74294d0535a793b0872fdad010dd6152698b2e9cd86e395d33969f7029cd2a.png" title=" Global tiempo espera" width="1366"/>
+                <img src="e7ada84768e6865c5ecd39b794d68cae9fc9e30edb93ecd9983fe7e4597bfceb.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="e7ada84768e6865c5ecd39b794d68cae9fc9e30edb93ecd9983fe7e4597bfceb.png" title=" Global enters 'Pablo' into SELECCIONAR LA CASILLA DE NOMBRE" width="1366"/>
+                <img src="536d142e2100ac74cac3b65e420de5ba72da12dfcf5d862da620c739cb3538f6.png" title=" Global enters 'Pablo' into SELECCIONAR LA CASILLA DE NOMBRE (completed)" width="1366"/>
+                <img src="536d142e2100ac74cac3b65e420de5ba72da12dfcf5d862da620c739cb3538f6.png" title=" Global tiempo espera" width="1366"/>
+                <img src="536d142e2100ac74cac3b65e420de5ba72da12dfcf5d862da620c739cb3538f6.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="536d142e2100ac74cac3b65e420de5ba72da12dfcf5d862da620c739cb3538f6.png" title=" Global enters 'Rojas' into SELECCIONAR LA CASILLA DE APELLIDO" width="1366"/>
+                <img src="3122846bd3063dd6c1fc3b9a53d7ff9294d772f250444d92e27c8398dbec561b.png" title=" Global enters 'Rojas' into SELECCIONAR LA CASILLA DE APELLIDO (completed)" width="1366"/>
+                <img src="3122846bd3063dd6c1fc3b9a53d7ff9294d772f250444d92e27c8398dbec561b.png" title=" Global tiempo espera" width="1366"/>
+                <img src="41975dcc04a2b96db0edc6b0b7eb58d0a7402a09ae5a5b375df82a35b727232e.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="41975dcc04a2b96db0edc6b0b7eb58d0a7402a09ae5a5b375df82a35b727232e.png" title=" Global enters 'pablorojas@cbit-online.com' into SELECCIONAR LA CASILLA DE CORREO" width="1366"/>
+                <img src="e41d032aa179f94669e301db3498cf8bebe010f5fa2300630297872b419d6ee1.png" title=" Global enters 'pablorojas@cbit-online.com' into SELECCIONAR LA CASILLA DE CORREO (completed)" width="1366"/>
+                <img src="e41d032aa179f94669e301db3498cf8bebe010f5fa2300630297872b419d6ee1.png" title=" Global tiempo espera" width="1366"/>
+                <img src="e41d032aa179f94669e301db3498cf8bebe010f5fa2300630297872b419d6ee1.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="e41d032aa179f94669e301db3498cf8bebe010f5fa2300630297872b419d6ee1.png" title=" Global enters '18' into SELECCIONAR LA CASILLA DE EDAD" width="1366"/>
+                <img src="0aa810ccc918f98d006765b3fdd22e18e76a86749a8198d037b8622e95bb79e1.png" title=" Global enters '18' into SELECCIONAR LA CASILLA DE EDAD (completed)" width="1366"/>
+                <img src="0aa810ccc918f98d006765b3fdd22e18e76a86749a8198d037b8622e95bb79e1.png" title=" Global tiempo espera" width="1366"/>
+                <img src="0a7235492010ec5bea359f1a34248fa70353f613776d88b26fc90efb3c9e7455.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="0a7235492010ec5bea359f1a34248fa70353f613776d88b26fc90efb3c9e7455.png" title=" Global enters '1000000' into SELECCIONAR LA CASILLA DE SALARIO" width="1366"/>
+                <img src="782ac6e6bd2b423f56bdfdaa7580a7718f92e971713b6ba6a73e3ed1a7560bdc.png" title=" Global enters '1000000' into SELECCIONAR LA CASILLA DE SALARIO (completed)" width="1366"/>
+                <img src="782ac6e6bd2b423f56bdfdaa7580a7718f92e971713b6ba6a73e3ed1a7560bdc.png" title=" Global tiempo espera" width="1366"/>
+                <img src="62c5bbf4cc154ceb696524aa974447f4862febea905a86954a4dadded39d7fdf.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="62c5bbf4cc154ceb696524aa974447f4862febea905a86954a4dadded39d7fdf.png" title=" Global enters 'Calidad' into SELECCIONAR LA CASILLA DE AREA DE TRABAJO" width="1366"/>
+                <img src="32f326d05e1036d554951088d24dc9fb1af9c8cfe9c2a4d428af8eefecef57f8.png" title=" Global enters 'Calidad' into SELECCIONAR LA CASILLA DE AREA DE TRABAJO (completed)" width="1366"/>
+                <img src="32f326d05e1036d554951088d24dc9fb1af9c8cfe9c2a4d428af8eefecef57f8.png" title=" Global tiempo espera" width="1366"/>
+                <img src="812068303cced7da911d95d9eda74ddd36c65d1ac8d19d1afe634b395e044123.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="812068303cced7da911d95d9eda74ddd36c65d1ac8d19d1afe634b395e044123.png" title=" Global clicks on CLICK EN SUBMIT" width="1366"/>
+                <img src="2caedd44298a342ce109c7d8b5aa3262d5c05113e2464ff8e3fafb1502fbb0eb.png" title=" Global clicks on CLICK EN SUBMIT (completed)" width="1366"/>
+                <img src="2caedd44298a342ce109c7d8b5aa3262d5c05113e2464ff8e3fafb1502fbb0eb.png" title=" Global tiempo espera" width="1366"/>
+                <img src="7866964321169e3478d94d70fb0d9843f964afdc0f073cab4b91463caafe8f57.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="7866964321169e3478d94d70fb0d9843f964afdc0f073cab4b91463caafe8f57.png" title=" Global tiempo espera" width="1366"/>
+                <img src="7866964321169e3478d94d70fb0d9843f964afdc0f073cab4b91463caafe8f57.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="7866964321169e3478d94d70fb0d9843f964afdc0f073cab4b91463caafe8f57.png" title=" Global enters 'Cierra' into CLICK EN CASILLA BUSCAR PARA LA VERIFICACION" width="1366"/>
+                <img src="15da8fc8a699ba5307f0d53da1c410eee0ba3012c9e6d2fbb2032d0c0a198c53.png" title=" Global enters 'Cierra' into CLICK EN CASILLA BUSCAR PARA LA VERIFICACION (completed)" width="1366"/>
+                <img src="15da8fc8a699ba5307f0d53da1c410eee0ba3012c9e6d2fbb2032d0c0a198c53.png" title=" Global tiempo espera" width="1366"/>
+                <img src="15da8fc8a699ba5307f0d53da1c410eee0ba3012c9e6d2fbb2032d0c0a198c53.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="15da8fc8a699ba5307f0d53da1c410eee0ba3012c9e6d2fbb2032d0c0a198c53.png" title=" Global clicks on ELIMINARA UN USUARIO" width="1366"/>
+                <img src="c8749cf9bc8cc4493f3fd629e9e0709efe0f15b5623a9179a52d058ad4327397.png" title=" Global clicks on ELIMINARA UN USUARIO (completed)" width="1366"/>
+                <img src="c8749cf9bc8cc4493f3fd629e9e0709efe0f15b5623a9179a52d058ad4327397.png" title=" Global tiempo espera" width="1366"/>
+                <img src="a4f255e15ac9656f59aaf51a01ae82204291797be2c4b0e1d831bf5ab5d7fdd1.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="a4f255e15ac9656f59aaf51a01ae82204291797be2c4b0e1d831bf5ab5d7fdd1.png" title=" Global home elements (completed)" width="1366"/>
+                <img src="a4f255e15ac9656f59aaf51a01ae82204291797be2c4b0e1d831bf5ab5d7fdd1.png" title=" Global home widgets" width="1366"/>
+                <img src="d12cdd064421ed54af9f6877fb811ad1d354e54456bcb146c8fff66ae1bfb38f.png" title=" Global tiempo espera" width="1366"/>
+                <img src="d12cdd064421ed54af9f6877fb811ad1d354e54456bcb146c8fff66ae1bfb38f.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="d12cdd064421ed54af9f6877fb811ad1d354e54456bcb146c8fff66ae1bfb38f.png" title=" Global clicks on SELECCIONAR WIDGETS" width="1366"/>
+                <img src="9bce822a0a7180fc3cc3dd64f1a397c129585eb6316d0ca40476ddceae5f60fa.png" title=" Global clicks on SELECCIONAR WIDGETS (completed)" width="1366"/>
+                <img src="9bce822a0a7180fc3cc3dd64f1a397c129585eb6316d0ca40476ddceae5f60fa.png" title=" Global tiempo espera" width="1366"/>
+                <img src="dbfa413eae044382ccea6358c306db64487eafe6b281340139b04fe59a20b57a.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="dbfa413eae044382ccea6358c306db64487eafe6b281340139b04fe59a20b57a.png" title=" Global clicks on SELECCIONAR DATE PICKER" width="1366"/>
+                <img src="37167870009357dbe47657966e0aa55d86f40d1dc79442fc682e1591c1d12d7a.png" title=" Global clicks on SELECCIONAR DATE PICKER (completed)" width="1366"/>
+                <img src="37167870009357dbe47657966e0aa55d86f40d1dc79442fc682e1591c1d12d7a.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="9ca07d6b74b3997c42e1f6de62e8cec6e53b8e280e852669d6a9a9bd9d8194b6.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="9ca07d6b74b3997c42e1f6de62e8cec6e53b8e280e852669d6a9a9bd9d8194b6.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="f425291b49fe508d1aa09367c2ca88915e797b130582589fb53a97e824c16046.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="f425291b49fe508d1aa09367c2ca88915e797b130582589fb53a97e824c16046.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="db7e60aa2a232e09c7e887a8001ed863739f5ab14d042e07548e1ee55957a401.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="db7e60aa2a232e09c7e887a8001ed863739f5ab14d042e07548e1ee55957a401.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="7f2955186dc50e332c090d278691bd53850d78c1e0de7b15f2814ab39be3a472.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="7f2955186dc50e332c090d278691bd53850d78c1e0de7b15f2814ab39be3a472.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="7f2955186dc50e332c090d278691bd53850d78c1e0de7b15f2814ab39be3a472.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="d14de49bf8dd48f50b456b01e5c42ad01ad5d50121d4e5241d81c8e4ec226341.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="d14de49bf8dd48f50b456b01e5c42ad01ad5d50121d4e5241d81c8e4ec226341.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="afeda23ffe3bdf1a91cf40791ef7bb469976cc238e11a964770fad3e1490989b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="afeda23ffe3bdf1a91cf40791ef7bb469976cc238e11a964770fad3e1490989b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="afeda23ffe3bdf1a91cf40791ef7bb469976cc238e11a964770fad3e1490989b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="8dc11de0658709215942381908927cc1cb8ed167a6427b5a1ae001b072fdf21a.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="8dc11de0658709215942381908927cc1cb8ed167a6427b5a1ae001b072fdf21a.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="a9f8fde820420728436e4ef29c49ca1ed34c6d66c31504fef98328cac171141f.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="a9f8fde820420728436e4ef29c49ca1ed34c6d66c31504fef98328cac171141f.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="cbffe38f43d02c4c099130377cfaa5ecfaf743ac6a38cd164bf12017e0152ac3.png" title=" Global types 'BACK_SPACE' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="cbffe38f43d02c4c099130377cfaa5ecfaf743ac6a38cd164bf12017e0152ac3.png" title=" Global enters '09/21/2021' into SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="ff9b1e566a3728764eb02923ca56e16d6eff2161ac709cb7652a29f351225e8c.png" title=" Global enters '09/21/2021' into SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="ff9b1e566a3728764eb02923ca56e16d6eff2161ac709cb7652a29f351225e8c.png" title=" Global tiempo espera" width="1366"/>
+                <img src="ff9b1e566a3728764eb02923ca56e16d6eff2161ac709cb7652a29f351225e8c.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="ff9b1e566a3728764eb02923ca56e16d6eff2161ac709cb7652a29f351225e8c.png" title=" Global types 'ENTER' in SELECCIONAR LA CASILLA DE DATE" width="1366"/>
+                <img src="63e6e4a44059f3e37376b838239e8961b297583ac557bd054e57b0daa8800cce.png" title=" Global types 'ENTER' in SELECCIONAR LA CASILLA DE DATE (completed)" width="1366"/>
+                <img src="63e6e4a44059f3e37376b838239e8961b297583ac557bd054e57b0daa8800cce.png" title=" Global tiempo espera" width="1366"/>
+                <img src="63e6e4a44059f3e37376b838239e8961b297583ac557bd054e57b0daa8800cce.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="63e6e4a44059f3e37376b838239e8961b297583ac557bd054e57b0daa8800cce.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="64d90b5fe29dcb0114c96789ab131b96919ba31f0ee9f46c72d1e98e8b16d7f1.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="64d90b5fe29dcb0114c96789ab131b96919ba31f0ee9f46c72d1e98e8b16d7f1.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="64d90b5fe29dcb0114c96789ab131b96919ba31f0ee9f46c72d1e98e8b16d7f1.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="4f50633d941025a3db3612883e6243762ee04b898c2bd853af1f44efb2315230.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="4f50633d941025a3db3612883e6243762ee04b898c2bd853af1f44efb2315230.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="4f50633d941025a3db3612883e6243762ee04b898c2bd853af1f44efb2315230.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="7f2a52fe51eb5a0d0d6b90f2f459d9d66fba13333f7bda741ea82e3af1dc7efb.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="7f2a52fe51eb5a0d0d6b90f2f459d9d66fba13333f7bda741ea82e3af1dc7efb.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="c647feba82875526861dd5c18df2ca9fc8ba9fc87d31890c42fa8c0bb0cee197.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="c647feba82875526861dd5c18df2ca9fc8ba9fc87d31890c42fa8c0bb0cee197.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="c647feba82875526861dd5c18df2ca9fc8ba9fc87d31890c42fa8c0bb0cee197.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="e03a0c756315c9be105199aeb231c77298e913513d24dc30e8370a622efc3998.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="e03a0c756315c9be105199aeb231c77298e913513d24dc30e8370a622efc3998.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="698846591498f39629947684409cb666ac676b2e163e526d07befa55a87ab73f.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="698846591498f39629947684409cb666ac676b2e163e526d07befa55a87ab73f.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="e333fe30b08d7c8c0f7c3565f5e508f33a4b7a16ab2817f23b5bcec01f7b9c42.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="0f4afb29863ba681dfc097c78e46cab8e16079dc141e9ea8731e63ac7e1b4ee0.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="0f4afb29863ba681dfc097c78e46cab8e16079dc141e9ea8731e63ac7e1b4ee0.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="0f4afb29863ba681dfc097c78e46cab8e16079dc141e9ea8731e63ac7e1b4ee0.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="cd35ccc30c63d132f7f5293b1b6999941484bf3ce95a038bdcc9fc1b56bc5329.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="598ea713ea288dfa90de0f38ca1d9a508efbe293aa1490891287f2625b82f9bb.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="598ea713ea288dfa90de0f38ca1d9a508efbe293aa1490891287f2625b82f9bb.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="56329374e397f609c58a22bd663045f1d7197d80828cd67032d935e4fc92a801.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="56329374e397f609c58a22bd663045f1d7197d80828cd67032d935e4fc92a801.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="7bec5838401df2b148c73f8fd261f894e30b1cfeb5189de4ab8b02f1fabb9471.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="7bec5838401df2b148c73f8fd261f894e30b1cfeb5189de4ab8b02f1fabb9471.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="349712c6aea63b84f54ff49869e66958181b5612e2e5e05ccbc000acc2a04c8b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="349712c6aea63b84f54ff49869e66958181b5612e2e5e05ccbc000acc2a04c8b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="a42b4b13c4ae58d3abd1f5e5f1a91f5fb63c2a2d7e3efab5ffd1273f940c2ce9.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="a42b4b13c4ae58d3abd1f5e5f1a91f5fb63c2a2d7e3efab5ffd1273f940c2ce9.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="5abf6d35d0e922d8cb7d64be0a43072902a4cb4c430589908d2b3721a7b2703c.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="5abf6d35d0e922d8cb7d64be0a43072902a4cb4c430589908d2b3721a7b2703c.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="6f6295d072ca0c4849e72dd4d8175a58f018f8877c46eb4e0fd5ff2143763c1b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="6f6295d072ca0c4849e72dd4d8175a58f018f8877c46eb4e0fd5ff2143763c1b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="6f6295d072ca0c4849e72dd4d8175a58f018f8877c46eb4e0fd5ff2143763c1b.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="d227180eccdffb28fef32acbdfc3b0b0fce71e9650daf4c8cdaceb3515747ea9.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="d227180eccdffb28fef32acbdfc3b0b0fce71e9650daf4c8cdaceb3515747ea9.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="d227180eccdffb28fef32acbdfc3b0b0fce71e9650daf4c8cdaceb3515747ea9.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="2323d0ddeed3e0e45f4aac429df50662c28724cbee940e5d042759e52ca89703.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="2323d0ddeed3e0e45f4aac429df50662c28724cbee940e5d042759e52ca89703.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="ff98d8217b40dc8e50b753f98265bb2c9c520ded50000dedc91debc6763db178.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="ff98d8217b40dc8e50b753f98265bb2c9c520ded50000dedc91debc6763db178.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="ff98d8217b40dc8e50b753f98265bb2c9c520ded50000dedc91debc6763db178.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="76b88035ffc3e136270c4d68e0440cca5314ee860ca1f99a524441963d77331e.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="76b88035ffc3e136270c4d68e0440cca5314ee860ca1f99a524441963d77331e.png" title=" Global types 'BACK_SPACE' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="76b88035ffc3e136270c4d68e0440cca5314ee860ca1f99a524441963d77331e.png" title=" Global enters '12/24/2021 23:59' into SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="cb27f0c935e4d65f55bc1eb2cc050f84d08aa1846b4e7a486433e19e3defc3ac.png" title=" Global enters '12/24/2021 23:59' into SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="cb27f0c935e4d65f55bc1eb2cc050f84d08aa1846b4e7a486433e19e3defc3ac.png" title=" Global tiempo espera" width="1366"/>
+                <img src="cb27f0c935e4d65f55bc1eb2cc050f84d08aa1846b4e7a486433e19e3defc3ac.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="cb27f0c935e4d65f55bc1eb2cc050f84d08aa1846b4e7a486433e19e3defc3ac.png" title=" Global types 'ENTER' in SELECCIONAR DATE AND TIME" width="1366"/>
+                <img src="cb27f0c935e4d65f55bc1eb2cc050f84d08aa1846b4e7a486433e19e3defc3ac.png" title=" Global types 'ENTER' in SELECCIONAR DATE AND TIME (completed)" width="1366"/>
+                <img src="2a66c4ea85d63bd45bb81a2b4fcff70240f0f64c0d580447a5d2be9f052f1fc0.png" title=" Global tiempo espera" width="1366"/>
+                <img src="2a66c4ea85d63bd45bb81a2b4fcff70240f0f64c0d580447a5d2be9f052f1fc0.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="2a66c4ea85d63bd45bb81a2b4fcff70240f0f64c0d580447a5d2be9f052f1fc0.png" title=" Global home widgets (completed)" width="1366"/>
+                <img src="2a66c4ea85d63bd45bb81a2b4fcff70240f0f64c0d580447a5d2be9f052f1fc0.png" title=" Global home alerts" width="1366"/>
+                <img src="4080105d147821a2558d3c83aaf2b819dd93dc1fd99f594a53491041b55d9871.png" title=" Global clicks on SELECCIONAR LA CASILLA DE FRAMES Y ALERTAS" width="1366"/>
+                <img src="1e54d513951913a9cc8d9021644371d920463e8946faaa9962305405a5f340b4.png" title=" Global clicks on SELECCIONAR LA CASILLA DE FRAMES Y ALERTAS (completed)" width="1366"/>
+                <img src="19709bcdec24c94657d7cc54ca6eebbf61188f9bd345317d441541161d494903.png" title=" Global clicks on SELECCIONAR LA OPCION DE ALERTS" width="1366"/>
+                <img src="c83215f96db279f2f208aa973daae09f66f8d881a50552c0b8311b579fad19e6.png" title=" Global clicks on SELECCIONAR LA OPCION DE ALERTS (completed)" width="1366"/>
+                <img src="c83215f96db279f2f208aa973daae09f66f8d881a50552c0b8311b579fad19e6.png" title=" Global tiempo espera" width="1366"/>
+                <img src="d921caa47a1c66d02a9d95cbaa52bf3e8aaea4b1f9c041b2ebe4467dac0305cb.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="d921caa47a1c66d02a9d95cbaa52bf3e8aaea4b1f9c041b2ebe4467dac0305cb.png" title=" Global clicks on SELECCIONAR PRIMER BOTON" width="1366"/>
+                <img src="9e1f9be08dde65ebaf0feb827f82e4f564905934c24fe6128f774ca9e730d5c6.png" title=" Global tiempo espera" width="1366"/>
+                <img src="6776cc67f724599776383ead6ed81871698e9cf510b4f6e9da66cda9b2f4433d.png" title=" Global tiempo espera (completed)" width="1366"/>
+                <img src="6776cc67f724599776383ead6ed81871698e9cf510b4f6e9da66cda9b2f4433d.png" title=" Global home alerts (completed): <span class='error-color'>ERROR</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.0</span>
+</div>
+</body>
+</html>
